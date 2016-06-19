@@ -1,0 +1,35 @@
+CREATE TABLE books (
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    published_at DATE NULL,
+    isbn VARCHAR(255) NOT NULL,
+    asin VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+LOAD DATA INFILE '/Users/yxfan/MyWorks/Learning/bookish-workshop/_misc/books/books.csv' 
+INTO TABLE books (title, author, published_at, isbn, asin)
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+SET ID = NULL;
+
+
+LOAD DATA INFILE '/Users/yxfan/MyWorks/Learning/bookish-workshop/_misc/books/books.csv' 
+INTO TABLE books
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(title, author, published_at, isbn, asin)
+SET ID = NULL;
+
+
+> GRANT USAGE ON bookishdb.* TO 'username'@'localhost';
+
+//    "title": "领域特定语言",
+//    "author": ["Martin Fowler", "ThoughtWorks中国"],
+//    "published_at": "2013-03-21",
+//    "isbn": ["7111413059", "9787111413059"],
+//    "asin": "B00BT9KOFM"

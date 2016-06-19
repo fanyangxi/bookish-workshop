@@ -1,0 +1,24 @@
+{
+  "name": "bookish",
+  "version": "1.0.0",
+  "description": "the bookish workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "bookish"
+  ],
+  "author": "fan",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "body-parser": "1.15.0",
+    "bootstrap": "^3.3.6",
+    "express": "4.13.4",
+    "express-jwt": "3.3.0",
+    "jquery": "^2.2.3",
+    "morgan": "1.7.0"
+  }
+}

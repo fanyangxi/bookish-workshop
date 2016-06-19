@@ -1,0 +1,11 @@
+> create database bookishdb;
+> create user 'bookish-admin-1'@'localhost' IDENTIFIED BY 'password';
+> UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='bookish-admin';
+> grant all on bookishdb.* to 'bookish-admin'@'localhost';
+
+ALTER USER 'bookish-admin'@'localhost' IDENTIFIED BY 'password';
+DROP USER 'bookish-admin'@'localhost';
+
+$ mysql.server start
+$ mysql -h localhost -u root -p
+$ mysql -u username -p -h host databasename
