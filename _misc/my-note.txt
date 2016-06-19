@@ -9,3 +9,6 @@ DROP USER 'bookish-admin'@'localhost';
 $ mysql.server start
 $ mysql -h localhost -u root -p
 $ mysql -u username -p -h host databasename
+
+
+https://github.com/SuXiaoKai/letusgo-client-server-spring
